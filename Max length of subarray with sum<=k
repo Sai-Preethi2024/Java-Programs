@@ -1,0 +1,24 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = {3,4,9,3,2,4,1,2,0,5,0,1,2};
+        int k = sc.nextInt();
+        int j = 0;
+        int sum = 0;
+        int maxLen = 0;
+        for (int i=0; i<arr.length; i++) {
+            sum += arr[i];
+            while (sum > k) {
+                sum -= arr[j];
+                j++;
+            }
+            if(s<=k){
+                if(i-j+1>maxLen){
+                    maxLen = i-j+1; 
+                }
+            }
+        }
+        System.out.print(maxLen);
+    }
+}
